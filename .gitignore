@@ -1,7 +1,13 @@
 node_modules/
 npm-debug.log
 bower_components/
-app/**/*.js
-*.js.map
 .DS_Store
 build/
+
+# JavaScript
+*.js
+*.js.map
+
+# KEEP
+!gulpfiles.js
+!systemjs.config.js

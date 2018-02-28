@@ -5,22 +5,21 @@ import { AppComponent } from './app.component';
 import { AnimalListComponent } from './components/animal-list.component';
 import { NewAnimalComponent } from './components/new-animal.component';
 import { EditAnimalComponent } from './components/edit-animal.component';
+import { AgePipe } from './pipes/age.pipe';
 
 @NgModule({
 	imports: [
 		BrowserModule,
 		FormsModule
-	],
-	declarations: [
+	], declarations: [
 		AppComponent,
-		AnimalListComponent,
+		EditAnimalComponent,
 		NewAnimalComponent,
-		EditAnimalComponent
+		AgePipe,
+		AnimalListComponent
 	], bootstrap: [
 		AppComponent
 	]
 })
 
-export class AppModule {
-
-}
+export class AppModule { }

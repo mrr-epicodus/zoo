@@ -46,10 +46,10 @@ npm test
 ```
 
 #### Quick run/setup
-If you want to just get the project to run, try this command!
+If you want to just get the project to run, try this command while on your Desktop!
 ```
-git clone https://github.com/ryanglenferris/zoo ~/Users/Desktop/zoo;
-cd ~/Users/Desktop/zoo;
+git clone https://github.com/ryanglenferris/zoo;
+cd ~/zoo;
 npm install;
 bower install;
 gulp build;

@@ -49,9 +49,10 @@ npm test
 If you want to just get the project to run, try this command while on your Desktop!
 ```
 git clone https://github.com/ryanglenferris/zoo;
-cd ~/zoo;
-npm install;
+cd zoo;
 bower install;
+npm install;
+npm test;
 gulp build;
 gulp serve;
 ```

@@ -4,16 +4,33 @@ import { Animal } from './models/animal.model';
 @Component({
 	selector: 'app-root',
 	template: `
-	    <div class="container">
-			<h1>ANIMALS</h1>
-			<animal-list></animal-list>
-			</div>
+    <h1>All Animals at the Zoo</h1>
+
+    <animal-list [childAnimalList]="masterAnimalList" (editClickSender)="editAnimal($event)"></animal-list>
+
+    <hr>
+
+    <edit-animal [childSelectedAnimal]="selectedAnimal" (finishedClickedSender)="finishedEditing()"></edit-animal>
+    <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
   `
 })
 
-export class App_Component {
-	animals_master: Animal[] = [
+export class AppComponent {
+	selectedAnimal = null;
+
+	masterAnimalList: Animal[] = [
 
 	];
 
+	editAnimal(clickedAnimal) {
+		this.selectedAnimal = clickedAnimal;
+	}
+
+	finishedEditing() {
+		this.selectedAnimal = null;
+	}
+
+	addAnimal(newAnimalFromChild: Animal) {
+		this.masterAnimalList.push(newAnimalFromChild);
+	}
 }

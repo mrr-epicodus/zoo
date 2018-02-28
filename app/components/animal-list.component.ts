@@ -9,7 +9,7 @@ import { Animal } from './../models/animal.model';
 })
 
 export class AnimalListComponent {
-	@Input() animals_child: Animal[];
+	@Input() childAnimals: Animal[];
 	@Output() clickSender = new EventEmitter();
 
 	animals: Animal[] = [
